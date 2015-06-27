@@ -49,6 +49,7 @@
  */
 @property (nonatomic, weak) UIView *bottomView;
 
+@property (nonatomic) CGFloat bottomBarDefaultHeight;
 #pragma mark - Methods
 
 /**

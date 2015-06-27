@@ -25,7 +25,7 @@ static CGFloat const JDFPeekabooCoordinatorNavigationBarHorizontalHeightDifferen
 
 // Default values
 @property (nonatomic) CGFloat topViewDefaultY;
-@property (nonatomic) CGFloat bottomBarDefaultHeight;
+//@property (nonatomic) CGFloat bottomBarDefaultHeight;
 
 @end
 
@@ -57,7 +57,11 @@ static CGFloat const JDFPeekabooCoordinatorNavigationBarHorizontalHeightDifferen
 
 - (CGFloat)bottomBarDefaultHeight
 {
-    return self.bottomView.frame.size.height;
+    if (!_bottomBarDefaultHeight) {
+        return self.bottomView.frame.size.height;
+    }else{
+        return _bottomBarDefaultHeight;
+    }
 }
 
 
